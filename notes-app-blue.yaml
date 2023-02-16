@@ -19,7 +19,7 @@ spec:
     spec:
       containers:
       - name: notes-app-deployment
-        image: pavansa/notes-app:v1
+        image: pavansa/notes-app
         resources:
           requests:
             cpu: "100m"
