@@ -1,22 +1,25 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: notes-app-deployment
+  name: notes-app-deployment-green
   labels:
     app: notes-app
+    deployment: green
 spec:
   replicas: 2
   selector:
     matchLabels:
       app: notes-app
+      deployment: green
   template:
     metadata:
       labels:
         app: notes-app
+        deployment: green
     spec:
       containers:
       - name: notes-app-deployment
-        image: pavansa/notes-app
+        image: pavansa/notes-app:v2
         resources:
           requests:
             cpu: "100m"
